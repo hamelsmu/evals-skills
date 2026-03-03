@@ -1,4 +1,5 @@
 ---
+name: write-judge-prompt
 description: >
   Design LLM-as-Judge evaluators for subjective criteria that code-based checks
   cannot handle. Use when a failure mode requires interpretation (tone,

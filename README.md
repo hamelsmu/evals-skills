@@ -32,6 +32,27 @@ To upgrade:
 
 After installation, restart Claude Code. The skills will appear as `/evals-skills:<skill-name>`.
 
+## Installation (npx skills)
+
+If you use the open Skills CLI, install from this repo with:
+
+```bash
+npx skills add https://github.com/hamelsmu/evals-skills
+```
+
+Install one skill only:
+
+```bash
+npx skills add https://github.com/hamelsmu/evals-skills --skill eval-audit
+```
+
+Check for updates:
+
+```bash
+npx skills check
+npx skills update
+```
+
 ## Available Skills
 
 | Skill | What it does |

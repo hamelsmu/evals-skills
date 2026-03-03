@@ -1,4 +1,5 @@
 ---
+name: validate-evaluator
 description: >
   Calibrate an LLM judge against human labels using data splits, TPR/TNR, and
   bias correction. Use after writing a judge prompt (write-judge-prompt) when you
