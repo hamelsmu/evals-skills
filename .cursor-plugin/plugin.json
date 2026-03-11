@@ -1,0 +1,12 @@
+{
+  "name": "evals-skills",
+  "version": "0.2.0",
+  "description": "Skills for building LLM evaluations: pipeline audit, error analysis, synthetic data generation, LLM-as-Judge design, evaluator validation, RAG evaluation, and annotation interfaces.",
+  "author": {
+    "name": "Hamel Husain"
+  },
+  "homepage": "https://maven.com/parlance-labs/evals?promoCode=evals-info-url",
+  "repository": "https://github.com/hamelsmu/evals-skills",
+  "license": "MIT",
+  "keywords": ["evals", "llm", "evaluation", "rag", "judge", "annotation"]
+}
