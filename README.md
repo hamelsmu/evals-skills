@@ -24,14 +24,17 @@ The audit isn't a complete solution, but it will catch common problems we've see
 
 ### Cursor IDE
 
-Install the plugin from the Cursor Marketplace, or add it manually from GitHub:
+Run the install script from your terminal:
 
-1. Open Cursor Settings (`Cmd+Shift+J` on Mac, `Ctrl+Shift+J` on Windows/Linux)
-2. Navigate to **Rules**
-3. Click **Add Rule** and select **Remote Rule (GitHub)**
-4. Enter the repository URL: `https://github.com/hamelsmu/evals-skills`
+```bash
+bash <(curl -fsSL https://raw.githubusercontent.com/hamelsmu/evals-skills/main/scripts/install-cursor.sh)
+```
 
-After installation, skills appear under **Agent Decides** in the Rules section. Invoke any skill by typing `/skill-name` in Agent chat (e.g., `/eval-audit`).
+This copies the plugin into `~/.cursor/plugins/evals-skills` and registers it so Cursor loads the skills on startup. Restart Cursor after running the script.
+
+After installation, the skills appear under **Skills** in Cursor Settings (`Cmd+Shift+J` on Mac, `Ctrl+Shift+J` on Windows/Linux) > **Rules, Skills, Subagents**. Invoke any skill by typing `/skill-name` in Agent chat (e.g., `/eval-audit`).
+
+To upgrade, re-run the install script.
 
 ### Claude Code
 
