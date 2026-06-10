@@ -185,18 +185,21 @@ Or use `judgy` (`pip install judgy`):
 ```python
 from judgy import estimate_success_rate
 
-result = estimate_success_rate(
-    human_labels=test_human_labels,
-    evaluator_labels=test_eval_labels,
-    unlabeled_labels=prod_eval_labels
+# judgy expects 0/1 integer labels (1 = Pass, 0 = Fail)
+test_labels = [1 if l == 'Pass' else 0 for l in test_human_labels]
+test_preds = [1 if l == 'Pass' else 0 for l in test_eval_labels]
+unlabeled_preds = [1 if l == 'Pass' else 0 for l in prod_eval_labels]
+
+theta_hat, lower, upper = estimate_success_rate(
+    test_labels, test_preds, unlabeled_preds
 )
-print(f"Corrected rate: {result.estimate:.2f}")
-print(f"95% CI: [{result.ci_lower:.2f}, {result.ci_upper:.2f}]")
+print(f"Corrected rate: {theta_hat:.2f}")
+print(f"95% CI: [{lower:.2f}, {upper:.2f}]")
 ```
 
 ## Practical Guidance
 
-- **Pin exact model versions** for LLM judges (e.g., `gpt-4o-2024-05-13`, not `gpt-4o`). Providers update models without notice, causing silent drift.
+- **Pin exact model versions** for LLM judges (a dated snapshot id like `<model>-<YYYY-MM-DD>`, not a floating alias). Providers update models without notice, causing silent drift.
 - **Re-validate** after changing the judge prompt, switching models, or when production confidence intervals widen unexpectedly.
 - Use ~100 labeled examples (50 Pass, 50 Fail). Below 60, confidence intervals become wide.
 - **One trusted domain expert** is the most efficient labeling path. If not feasible, have two annotators label 20-50 traces independently and resolve disagreements before proceeding.
