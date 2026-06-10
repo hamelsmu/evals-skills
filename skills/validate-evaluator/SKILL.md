@@ -203,7 +203,7 @@ print(f"95% CI: [{lower:.2f}, {upper:.2f}]")
 - **Re-validate** after changing the judge prompt, switching models, or when production confidence intervals widen unexpectedly.
 - Use ~100 labeled examples (50 Pass, 50 Fail). Below 60, confidence intervals become wide.
 - **One trusted domain expert** is the most efficient labeling path. If not feasible, have two annotators label 20-50 traces independently and resolve disagreements before proceeding.
-- **Improving TPR narrows the confidence interval more than improving TNR.** The correction formula divides by TPR, so low TPR amplifies estimation errors into wide CIs.
+- **Improving TPR narrows the confidence interval more than improving TNR.** The correction divides by `(TPR + TNR - 1)`, so a low TPR shrinks the denominator and amplifies estimation errors into wide CIs.
 
 ## Anti-Patterns
 
