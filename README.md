@@ -61,6 +61,7 @@ npx skills update
 | error-analysis | Guide the user through reading traces and categorizing failures |
 | generate-synthetic-data | Create diverse synthetic test inputs using dimension-based tuple generation |
 | write-judge-prompt | Design LLM-as-Judge evaluators for subjective quality criteria |
+| decompose-judge-criteria | Decide whether a judge criterion should be one binary question or a bank of atomic yes/no questions, then generate and aggregate them |
 | validate-evaluator | Calibrate LLM judges against human labels using data splits, TPR/TNR, and bias correction |
 | evaluate-rag | Evaluate retrieval and generation quality in RAG pipelines |
 | build-review-interface | Build custom annotation interfaces for human trace review |
