@@ -1,5 +1,12 @@
 # Eval Skills for AI Coding Agents
 
+> [!IMPORTANT]
+> This repository is deprecated. The skills moved to [ai-evals-course/error-discovery-skill](https://github.com/ai-evals-course/error-discovery-skill), a plugin called `evals` that Shreya Shankar and Hamel Husain maintain together. Install it with:
+>
+> ```bash
+> npx skills add https://github.com/ai-evals-course/error-discovery-skill
+> ```
+
 Skills that guide AI coding agents to help you build LLM evaluations.
 
 These skills guard against common mistakes I've seen helping 50+ companies and teaching students in our [AI Evals course](https://maven.com/parlance-labs/evals?promoCode=evals-info-url). If you're new to evals, see [questions.md](questions.md) for free resources on the fundamentals.
