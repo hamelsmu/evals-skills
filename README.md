@@ -1,10 +1,10 @@
 # Eval Skills for AI Coding Agents
 
 > [!IMPORTANT]
-> This repository is deprecated. The skills moved to [ai-evals-course/error-discovery-skill](https://github.com/ai-evals-course/error-discovery-skill), a plugin called `evals` that Shreya Shankar and Hamel Husain maintain together. Install it with:
+> This repository is deprecated. The skills moved to [ai-evals-course/evals-skills](https://github.com/ai-evals-course/evals-skills), a plugin called `evals` that Shreya Shankar and Hamel Husain maintain together. Install it with:
 >
 > ```bash
-> npx skills add https://github.com/ai-evals-course/error-discovery-skill
+> npx skills add https://github.com/ai-evals-course/evals-skills
 > ```
 
 Skills that guide AI coding agents to help you build LLM evaluations.
